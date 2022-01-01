@@ -1,0 +1,35 @@
+//Header file
+#include<stdio.h>
+char checknum(int);
+
+//Implementation file
+#include"numHdr.h"
+char checknum(int n)
+{
+ if(n>0)
+ {
+  printf("It is a positive number"); 
+ }
+ else if(n<0)
+ {
+  printf("It is a negative number");
+ }
+ else
+ {
+  printf("Neutral number"); 
+ }
+ return 0;
+}
+
+
+//Application file
+#include"numApp.c"
+int main()
+{
+ int x,res;
+ printf("Enter the number:");
+ scanf("%d",&x);
+ res=checknum(x);
+ printf("%c",res);
+ return 0;
+}
