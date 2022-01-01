@@ -1,0 +1,31 @@
+//Header file
+#include<stdio.h>
+char checkVowel(char);
+
+//Implementation file
+#include"vowelHdr.h"
+char checkVowel(char vo)
+{
+ if(vo=='a'||vo=='e'||vo=='i'||vo=='o'||vo=='u')
+ {
+  printf("It is a vowel");
+ }
+ else
+ {
+  printf("It is not a vowel");
+ }
+ return 0;
+}
+
+
+//Application file
+#include"vowelHdr.h"
+int main()
+{
+ char res,x;
+ printf("Enter the alphabet:");
+ scanf("%c",&x);
+ res=checkVowel(x); 
+ printf("%c",res);
+ return 0;
+}
