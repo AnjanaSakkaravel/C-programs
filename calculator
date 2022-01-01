@@ -1,0 +1,56 @@
+//Header file
+#include<stdio.h>
+int findCalc(char,int,int);
+
+//Implementation file
+#include"calcHdr.h"
+int findCalc(char sym,int x,int y)
+{
+ int z;
+ switch(sym)
+ {
+  case'+':
+	z=x+y;
+	printf("%d",z);
+	break;
+ case'-':
+        z=x-y;
+        printf("%d",z);
+        break;
+  case'*':
+        z=x*y;
+        printf("%d",z);
+        break;
+ case'/':
+        z=x/y;
+        printf("%d",z);
+        break;
+ case'%':
+        z=x%y;
+        printf("%d",z);
+        break;
+ default:
+	printf("No such symbol");
+ }
+ return 0;
+}
+
+//Application file
+#include"calcHdr.h"
+int main()
+{
+ char s;
+ int a,b;
+ printf("Enter + for addition\n");
+ printf("Enter - for subtraction\n");
+ printf("Enter * for multiplication\n");
+ printf("Enter / for obtaining quotient\n");
+ printf("Enter % for obtaining remainder\n");
+ scanf("%s",&s);
+ printf("Enter the value of a:");
+ scanf("%d",&a);
+ printf("Enter the value of b:");
+ scanf("%d",&b);
+ findCalc(s,a,b);
+ return 0;
+}
