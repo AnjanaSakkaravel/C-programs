@@ -1,0 +1,35 @@
+//Header file
+#include<stdio.h>
+float checkRemark(float);
+
+
+//Implementation file
+#include"cgpaHdr.h"
+float checkRemark(float cgpa)
+{
+ if(cgpa>9.0 && cgpa<=10.0)
+ printf("EXCELLENT");
+ if(cgpa>8.0 && cgpa<=9.0)
+ printf("VERY GOOD");
+ if(cgpa>7.0 && cgpa<=8.0)
+ printf("GOOD");
+ if(cgpa>6.0 && cgpa<=7.0)
+ printf("AVERAGE");
+ if(cgpa>0 && cgpa<=6.0)
+ printf("POOR");
+ else
+ printf("INVALID");
+ return 0;
+}
+
+
+//Application file
+#include"cgpaHdr.h"
+int main()
+{
+ float m;
+ printf("Enter the CGPA:");
+ scanf("%f",&m);
+ checkRemark(m);
+ return 0;
+}
