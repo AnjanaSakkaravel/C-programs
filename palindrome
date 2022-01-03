@@ -1,0 +1,38 @@
+//Header file
+#include<stdio.h>
+int findPalin(int);
+
+//Implementation file
+#include"pal.h"
+int findPalin(int a)
+{
+ int r,rev,temp;
+ temp=a;
+ while(a>0)
+ {
+  r=a%10;
+  rev=rev*10+r;
+  a=a/10;
+ } 
+ if(rev==temp) 
+  return 1;
+ else
+  return 0;
+}
+
+
+
+
+//Application file
+#include"pal.h"
+int main()
+{
+ int x,res;
+ printf("Enter the number:");
+ scanf("%d",&x);
+ res=findPalin(x);
+ if(res==1)
+  printf("It is a palindrome");
+ else
+  printf("It is not a palindrome");
+}
