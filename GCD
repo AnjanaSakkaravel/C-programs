@@ -1,0 +1,33 @@
+//Header file
+#include<stdio.h>
+int findGcd(int,int);
+
+
+
+//Implementation file
+#include"gcd.h"
+int findGcd(int a,int b)
+{
+ if(b==0)
+	return a;
+ else
+	return findGcd(b,a%b);
+}
+
+
+
+//Application file
+#include"gcd.h"
+int main()
+{
+ int res,x,y;
+ printf("Enter the 2 numbers :");
+ scanf("%d",&x);
+ scanf("%d",&y); 
+ if(x>y)
+	res=findGcd(x,y);
+ else
+	res=findGcd(x,y);
+ printf("%d",res);
+ return 0;
+}
