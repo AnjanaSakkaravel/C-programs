@@ -1,0 +1,27 @@
+//Header file
+#include<stdio.h>
+void findFact(int);
+
+//Implemetation file
+#include"factHdr.h"
+void findFact(int a)
+{
+ int i;
+ for(i=1;i<=a;i++)
+ {
+  if(a%i==0)
+	printf("%d",i);
+ }
+
+}
+
+//Application file
+#include"factHdr.h"
+int main()
+{
+ int x;
+ printf("Enter the number:");
+ scanf("%d",&x);
+ findFact(x);
+ return 0;
+}
