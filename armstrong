@@ -1,0 +1,51 @@
+//Header file
+#include<stdio.h>
+#include<math.h>
+int findArms(int);
+
+
+
+//Implementation file
+#include"arms.h"
+int findArms(int a)
+{
+ int r,sum,ndigits,temp;
+ sum=0;
+ ndigits=0;
+ temp=a;
+ while(a>0)
+ {
+ r=a%10;
+ ndigits=ndigits+1;
+ a=a/10;
+ } 
+ a=temp;
+ while(a>0)
+ {
+  r=a%10;
+  sum=sum+pow(r,ndigits);
+  a=a/10; 
+ }
+ if(temp==sum)
+  return 1;
+} 
+
+
+
+
+//Application file
+#include"arms.h"
+int main()
+{
+ int x,res;
+ printf("Enter the number:");
+ scanf("%d",&x);
+ res=findArms(x);
+ if(res==1)
+	printf("It is an armstrong number");
+ else
+	printf("It is not an armstrong number");
+ return 0;
+
+}
+
